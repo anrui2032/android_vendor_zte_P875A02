@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/zte/P875A02
 
 PRODUCT_COPY_FILES += \
-    vendor/zte/P875A02/proprietary/system/etc/sysconfig/aptxals-hiddenapi-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/aptxals-hiddenapi-whitelist.xml \
     vendor/zte/P875A02/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/zte/P875A02/proprietary/system_ext/bin/dpmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/dpmd \
     vendor/zte/P875A02/proprietary/system_ext/bin/tcmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/tcmd \
@@ -1521,7 +1520,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/vendor.zte.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.zte.hardware.radio@1.0.so
 
 PRODUCT_PACKAGES += \
-    aptxals \
     AlipayService \
     CACertService \
     CneApp \
@@ -1530,8 +1528,6 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm \
     QtiTelephony \
     QtiTelephonyService \
-    aptxacu \
-    aptxui \
     com.qualcomm.location \
     dpmserviceapp \
     ims \
