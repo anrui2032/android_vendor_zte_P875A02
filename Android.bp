@@ -4,6 +4,13 @@
 
 soong_namespace {
 	imports: [
+		"device/zte/P875A02",
+		"hardware/qcom-caf/sm8350",
+		"hardware/qcom-caf/wlan",
+		"vendor/qcom/opensource/commonsys/display",
+		"vendor/qcom/opensource/commonsys-intf/display",
+		"vendor/qcom/opensource/dataservices",
+		"vendor/qcom/opensource/display",
 	],
 }
 
