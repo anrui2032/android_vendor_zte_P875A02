@@ -836,7 +836,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.mcx.distortionmapper \
     com.qualcomm.mcx.linearmapper \
     com.qualcomm.mcx.policy.mfl \
-    com.qualcomm.qti.dpm.api@1.0 \
+    com.qualcomm.qti.dpm.api@1.0-vendor \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
