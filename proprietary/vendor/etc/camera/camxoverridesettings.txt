@@ -1,0 +1,9 @@
+enableNCSService=TRUE
+multiCameraEnable=TRUE
+enableSensorHWSync=TRUE
+multiCameraFrameSync=1
+disableFocusIndication=1
+enablePTDetection=TRUE
+FDClient=FDSWOnly
+logWarningMask=0
+overrideLogLevels=0x81
