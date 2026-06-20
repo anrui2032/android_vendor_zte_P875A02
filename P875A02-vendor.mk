@@ -93,6 +93,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/bin/init.qti.kernel.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.kernel.sh \
     vendor/zte/P875A02/proprietary/vendor/bin/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
     vendor/zte/P875A02/proprietary/vendor/bin/init.qti.qcv.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qcv.sh \
+    vendor/zte/P875A02/proprietary/vendor/bin/init.ssdaemon_vendor.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.ssdaemon_vendor.sh \
     vendor/zte/P875A02/proprietary/vendor/bin/ipacm-diag:$(TARGET_COPY_OUT_VENDOR)/bin/ipacm-diag \
     vendor/zte/P875A02/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
     vendor/zte/P875A02/proprietary/vendor/bin/keymasterd:$(TARGET_COPY_OUT_VENDOR)/bin/keymasterd \
@@ -124,6 +125,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/bin/shsusrd:$(TARGET_COPY_OUT_VENDOR)/bin/shsusrd \
     vendor/zte/P875A02/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
     vendor/zte/P875A02/proprietary/vendor/bin/sscrpcd:$(TARGET_COPY_OUT_VENDOR)/bin/sscrpcd \
+    vendor/zte/P875A02/proprietary/vendor/bin/ssdaemon_vendor:$(TARGET_COPY_OUT_VENDOR)/bin/ssdaemon_vendor \
     vendor/zte/P875A02/proprietary/vendor/bin/ssgqmigd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgqmigd \
     vendor/zte/P875A02/proprietary/vendor/bin/ssgtzd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgtzd \
     vendor/zte/P875A02/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
@@ -233,7 +235,9 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
+    vendor/zte/P875A02/proprietary/vendor/etc/init/ssdaemon_vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssdaemon_vendor.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
+    vendor/zte/P875A02/proprietary/vendor/etc/init/touchscreen_zte.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/touchscreen_zte.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
