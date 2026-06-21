@@ -47,6 +47,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/zte/P875A02/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/zte/P875A02/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
+    vendor/zte/P875A02/proprietary/vendor/bin/camerahalvs:$(TARGET_COPY_OUT_VENDOR)/bin/camerahalvs \
     vendor/zte/P875A02/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
     vendor/zte/P875A02/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
     vendor/zte/P875A02/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
@@ -152,8 +153,16 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd \
     vendor/zte/P875A02/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd \
     vendor/zte/P875A02/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/VfbTuningInterface.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/VfbTuningInterface.xml \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/beautiful_app/preference_beautify0.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beautiful_app/preference_beautify0.json \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/beautiful_app/preference_beautify1.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beautiful_app/preference_beautify1.json \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/beautiful_app/preference_beautify2.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beautiful_app/preference_beautify2.json \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/beautiful_fn/fn_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beautiful_fn/fn_default.xml \
     vendor/zte/P875A02/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/dualcam_cali.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/dualcam_cali.bin \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/remosaic_cali_ov16a1q.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/remosaic_cali_ov16a1q.bin \
     vendor/zte/P875A02/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
+    vendor/zte/P875A02/proprietary/vendor/etc/camera/widelencalc_cali.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/widelencalc_cali.bin \
     vendor/zte/P875A02/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     vendor/zte/P875A02/proprietary/vendor/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti \
     vendor/zte/P875A02/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
@@ -270,6 +279,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@2.1-service-qti.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc \
+    vendor/zte/P875A02/proprietary/vendor/etc/init/camerahalvs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalvs.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
@@ -840,6 +850,32 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.voiceprint@1.0.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.default.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.eeprom.gc5035_sm8350.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.eeprom.gc5035_sm8350.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.eeprom.imx682.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.eeprom.imx682.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.eeprom.ov16a1q.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.eeprom.ov16a1q.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.eeprom.s5kgh1sp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.eeprom.s5kgh1sp.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.eeprom.s5kgw3sp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.eeprom.s5kgw3sp.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.gc02m1_aux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.gc02m1_aux.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.gc5035_macro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.gc5035_macro.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.imx682.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.imx682.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.ov16a1q.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.ov16a1q.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.s5kgh1sp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.s5kgh1sp.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.s5kgw3sp13.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.s5kgw3sp13.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensor.sp5508_macro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensor.sp5508_macro.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_gc02m1_aux.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_gc02m1_aux.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_gc5035_macro.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_gc5035_macro.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_imx682.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_imx682.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_ov16a1q.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_ov16a1q.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_s5kgh1sp.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_s5kgh1sp.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_s5kgw3sp.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_s5kgw3sp.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.sensormodule.zte_sp5508_macro.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.sensormodule.zte_sp5508_macro.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_gc02m1_aux.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_gc02m1_aux.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_gc5035_macro.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_gc5035_macro.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_imx682.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_imx682.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_ov16a1q.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_ov16a1q.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_s5kgh1sp.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_s5kgh1sp.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_s5kgw3sp.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_s5kgw3sp.bin \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/com.zte.tuned.zte_sp5508_macro.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.zte.tuned.zte_sp5508_macro.bin \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.qti.camx.chiiqutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.camx.chiiqutils.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.qti.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv2.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.qti.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv3.so \
@@ -888,6 +924,16 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.af.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.awb.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.pdlib.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.vidhance.node.ica.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.vidhance.node.ica.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.capturebokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.capturebokeh.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.capturepostprocess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.capturepostprocess.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.hdr.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.mcxrealtimepostprocess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.mcxrealtimepostprocess.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.realtimebokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.realtimebokeh.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.realtimeparse.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.realtimeparse.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.realtimepostprocess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.realtimepostprocess.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.remosaic.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/com.zte.node.superiq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.zte.node.superiq.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/components/libdepthmapwrapper_secure.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/libdepthmapwrapper_secure.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/fdconfigpreview.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreview.bin \
     vendor/zte/P875A02/proprietary/vendor/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreviewlite.bin \
@@ -985,6 +1031,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libApeSwDec.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libFNVfbEngineHAL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFNVfbEngineHAL.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libFlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFlacSwDec.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libGPQTEEC_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPQTEEC_vendor.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libGPTEE_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPTEE_vendor.so \
@@ -1014,6 +1061,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libTrustedUITZ.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTrustedUITZ.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libTrustedUIVM.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTrustedUIVM.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libVkLayer_q3dtools.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libVkLayer_q3dtools.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libZEffectLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libZEffectLib.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdb-fts.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbloader.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbrtac.so \
@@ -1026,6 +1074,11 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libaidenoiser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiser.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libappclassifier.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libappclassifier.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_image.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_image.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_video.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libarcsoft_hdr_detection.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_detection.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libarcsoft_pdc_p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_pdc_p.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libasn1cper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1cper.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libasn1crt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1crt.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libasn1crtx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1crtx.so \
@@ -1047,17 +1100,26 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcacertclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcacertclient.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamerapostproc.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxeffect.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxexternalformatutils.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxfacialfeatures.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfacialfeatures.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxfdalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdalgo.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxfdengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdengine.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxhdrautodetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxhdrautodetect.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxifestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxifestriping.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamximageformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamximageformatutils.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxmirror.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxmirror.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxportraitbokehwrap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxportraitbokehwrap.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxqsatalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxqsatalgo.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxselfiebokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxselfiebokeh.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxskinbeautiful.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxskinbeautiful.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxskinenhance.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxskinenhance.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxstatscore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxstatscore.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxswispiqmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxswispiqmodule.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxswprocessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxswprocessalgo.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcamxtintlessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxtintlessalgo.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxwatermark.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxwatermark.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libcamxwidelencalc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxwidelencalc.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2svacnn.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcapiv2svarnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2svarnn.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2vop.so \
@@ -1066,6 +1128,8 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcdsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsp_default_listener.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchilog.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libchvs-bc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchvs-bc.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libchvs-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchvs-util.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
@@ -1091,9 +1155,11 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsutils.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdts-eagle-shared.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libdtsdsec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtsdsec.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libeepromutil.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeepromutil.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libexthwplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexthwplugin.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libfastcvdsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvdsp_stub.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvopt.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libfnxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfnxml.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libgameoptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgameoptfeature.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libgarden.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libgarden_haltests_e2e.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden_haltests_e2e.so \
@@ -1144,6 +1210,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libmctfengine_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmctfengine_stub.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libmcxcroputil.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmcxcroputil.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libmemperfd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemperfd.so \
@@ -1232,6 +1299,10 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/librcc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librcc.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/librcmask.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librcmask.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libremosaic_ov16a1q.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaic_ov16a1q.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libremosaic_s5kgw3sp13.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaic_s5kgw3sp13.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libremosaic_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaic_wrapper.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libremosaiclib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaiclib.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libril-db.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-db.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-ltedirectdisc.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-radioconfig.so \
@@ -1254,6 +1325,8 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsensorslog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorslog.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsi.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libskewknob.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libskewknob.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libskia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libskia.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libskia_watermark.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libskia_watermark.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsnapdragoncolor-manager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnapdragoncolor-manager.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsnapdragoncolor-qdcm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnapdragoncolor-qdcm.so \
