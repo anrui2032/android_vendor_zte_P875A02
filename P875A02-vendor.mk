@@ -378,6 +378,12 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql \
     vendor/zte/P875A02/proprietary/vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql \
     vendor/zte/P875A02/proprietary/vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql \
+    vendor/zte/P875A02/proprietary/vendor/etc/qdcm_calib_data_Visionox-NT37701-1080-2400-6P67Inch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Visionox-NT37701-1080-2400-6P67Inch.xml \
+    vendor/zte/P875A02/proprietary/vendor/etc/qdcm_calib_data_Visionox-NT37701-GAMUT-1080-2400-6P67Inch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Visionox-NT37701-GAMUT-1080-2400-6P67Inch.xml \
+    vendor/zte/P875A02/proprietary/vendor/etc/qdcm_calib_data_Visionox-RM692C9-1080-2460-6P9Inch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Visionox-RM692C9-1080-2460-6P9Inch.xml \
+    vendor/zte/P875A02/proprietary/vendor/etc/qdcm_calib_data_Visionox-RM692E1-1080-2400-6P67Inch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Visionox-RM692E1-1080-2400-6P67Inch.xml \
+    vendor/zte/P875A02/proprietary/vendor/etc/qdcm_calib_data_Visionox-RM692E1-HBM51-1080-2400-6P67Inch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Visionox-RM692E1-HBM51-1080-2400-6P67Inch.xml \
+    vendor/zte/P875A02/proprietary/vendor/etc/qdcm_calib_data_Visionox-RM692E1-HBMOTP-1080-2400-6P67Inch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Visionox-RM692E1-HBMOTP-1080-2400-6P67Inch.xml \
     vendor/zte/P875A02/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/zte/P875A02/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/zte/P875A02/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm.policy \
