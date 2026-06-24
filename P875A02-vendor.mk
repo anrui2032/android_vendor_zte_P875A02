@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor/zte/P875A02/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor/zte/P875A02/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
+    vendor/zte/P875A02/proprietary/vendor/bin/hw/vendor.zte.fingerprint.ifaahidl@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.zte.fingerprint.ifaahidl@1.0-service \
     vendor/zte/P875A02/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/zte/P875A02/proprietary/vendor/bin/imsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdaemon \
     vendor/zte/P875A02/proprietary/vendor/bin/init.kernel.post_boot-lahaina.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-lahaina.sh \
@@ -340,6 +341,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
+    vendor/zte/P875A02/proprietary/vendor/etc/init/vendor.zte.fingerprint.ifaahidl@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.zte.fingerprint.ifaahidl@1.0-service.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vmmgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vmmgr.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/zte/P875A02/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
@@ -1362,6 +1364,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynx.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysmon_cdsp_skel.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/libteec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteec.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libtfestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtfestriping.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
@@ -1514,10 +1517,12 @@ PRODUCT_COPY_FILES += \
     vendor/zte/P875A02/proprietary/vendor/lib64/vendor.qti.qspmhal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.qspmhal@1.0-impl.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/vendor.qti.qspmhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.qspmhal@1.0.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
+    vendor/zte/P875A02/proprietary/vendor/lib64/vendor.zte.fingerprint.ifaahidl@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.zte.fingerprint.ifaahidl@1.0.so \
     vendor/zte/P875A02/proprietary/vendor/lib64/vendor.zte.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.zte.hardware.radio@1.0.so
 
 PRODUCT_PACKAGES += \
     aptxals \
+    AlipayService \
     CACertService \
     CneApp \
     IWlanService \

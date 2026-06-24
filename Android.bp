@@ -16,6 +16,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "AlipayService",
+	owner: "zte",
+	apk: "proprietary/system/priv-app/AlipayService/AlipayService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "CACertService",
 	owner: "zte",
 	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
