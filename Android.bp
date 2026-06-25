@@ -1670,7 +1670,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libmmosal",
+	name: "libmmosal-vendor",
+	stem: "libmmosal",
 	owner: "zte",
 	strip: {
 		none: true,
