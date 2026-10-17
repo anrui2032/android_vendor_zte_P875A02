@@ -1285,6 +1285,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.imsrtpservice@3.0 \
+    DtsUltra \
     AlipayService \
     CACertService \
     CneApp \

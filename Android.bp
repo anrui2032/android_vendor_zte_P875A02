@@ -23568,6 +23568,19 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
+    name: "DtsUltra",
+    owner: "zte",
+    apk: "proprietary/system/app/DtsUltra/DtsUltra.apk",
+    overrides: [
+        "AudioFX",
+    ],
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
     name: "AlipayService",
     owner: "zte",
     apk: "proprietary/system/priv-app/AlipayService/AlipayService.apk",
